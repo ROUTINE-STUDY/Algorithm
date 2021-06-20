@@ -9,7 +9,6 @@ import java.util.Stack;
 public class Sanghoo_Stack {
 
     public static int lastStoneWeight(int[] stones) {
-        int res = 0;
         Stack<Integer> stack = new Stack<Integer>();
 
         Arrays.sort(stones);
@@ -18,10 +17,8 @@ public class Sanghoo_Stack {
         }
 
         while(stack.size() > 1) {
-            stack.push(Math.abs(stack.pop() - stack.pop()));
+            stack.push(stack.pop() - stack.pop());
             stack = sortStack(stack); // 재정렬 후 반복(스택|배열 재정렬)
-
-            if(stack.isEmpty()) return 0;
         }
 
         return stack.pop();
