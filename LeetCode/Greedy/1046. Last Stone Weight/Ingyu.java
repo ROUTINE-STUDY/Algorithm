@@ -11,10 +11,6 @@ class Ingyu {
 
         int index = stones.length - 1;      //맨끝에 최대값을 가르키게 함.
         while (stones[1] != 1001) {
-            if (stones[index] == 1001) {
-                index--;
-                continue;
-            }
             int temp = stones[index];
             stones[index] = 1001;
             stones[index - 1] = temp - stones[index - 1];
