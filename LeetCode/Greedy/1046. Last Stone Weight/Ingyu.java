@@ -20,7 +20,6 @@ class Ingyu {
             stones[index - 1] = temp - stones[index - 1];
             index--;
             Arrays.sort(stones);
-            if (index < 0) break;
         }
 
         return stones[0];
