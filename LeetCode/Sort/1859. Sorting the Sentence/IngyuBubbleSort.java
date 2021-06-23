@@ -1,6 +1,6 @@
 class Solution {
-
-    public void swap(String[] sArray, int i, int j) {//자리 바꾸는 메소드
+    //자리 바꾸는 메소드
+    public void swap(String[] sArray, int i, int j) {
         String temp = sArray[i];
         sArray[i] = sArray[j];
         sArray[j] = temp;
