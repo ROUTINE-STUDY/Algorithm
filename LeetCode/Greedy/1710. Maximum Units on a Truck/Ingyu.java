@@ -44,6 +44,7 @@ class Solution {
             }
         }
 
+	//최대값을 리턴.
         return currentWeight;
     }
 }
