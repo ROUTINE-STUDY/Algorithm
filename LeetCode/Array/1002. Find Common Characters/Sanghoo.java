@@ -21,12 +21,12 @@ public class Sanghoo {
         StringBuilder standard = list.get(0);   // 기준이 되는 첫 번째 문자열
 
         for(int i=0; i<standard.length(); i++) {
-            char ch = standard.charAt(i);
+            String ch = String.valueOf(standard.charAt(i));
             int index = 0;
 
             // 각 배열을 돌면서 하나라도 해당 문자(ch)가 없으면 break
             for(int j=1; j<list.size(); j++) {
-                index = list.get(j).indexOf(String.valueOf(ch));
+                index = list.get(j).indexOf(ch);
                 if(index == -1) {
                     break;
                 }
@@ -36,10 +36,10 @@ public class Sanghoo {
             if(index != -1) {
                 // 각 문자열에서 해당 문자의 위치를 찾아 삭제 및 res 추가
                 for(int k=1; k<list.size(); k++) {
-                    int deleteIndex = list.get(k).indexOf(String.valueOf(ch));
+                    int deleteIndex = list.get(k).indexOf(ch);
                     list.get(k).deleteCharAt(deleteIndex);
                 }
-                res.add(String.valueOf(ch));
+                res.add(ch);
             }
         }
 
