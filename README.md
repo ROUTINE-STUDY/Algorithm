@@ -47,4 +47,4 @@
 ## 기타 문의
 - [:sunglasses:인규](https://github.com/hwang434) : inqbator@knou.ac.kr
 - [:full_moon:상후](https://github.com/SanghooMoon) : sanghoo.moon@gmail.com
-- [:muscle:재홍](https://github.com/JaeHong94) : zkzkzk1541@gmail.com
+- [:muscle:재홍](https://github.com/JaeHong94) : moonshin123@naver.com
