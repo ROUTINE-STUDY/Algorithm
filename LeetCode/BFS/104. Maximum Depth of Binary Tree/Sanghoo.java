@@ -28,9 +28,10 @@ public class Sanghoo {
         queue.offer(root);  // root 노드 삽입
 
         while(!queue.isEmpty()) {
+            int size = queue.size();    // 큐 사이즈는 안쪽 for문 안에서 변하므로 안쪽 for문 전 고정
 
             // 노드를 하나씩 꺼내(선입선출) 자식 노드들이 있으면 큐에 삽입
-            for(int i=0; i<queue.size(); i++) {
+            for(int i=0; i<size; i++) {
                 TreeNode node = queue.poll();
                 if(node.left != null) {
                     queue.offer(node.left);
