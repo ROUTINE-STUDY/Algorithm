@@ -43,11 +43,9 @@ public class Sanghoo {
 
             for(int i=0; i<queue.size(); i++) {
                 Employee em =  queue.poll();    // 노드를 꺼내서
-                List<Integer> list = em.subordinates;   // 자식 노드들을 추출하고
 
-                // queue에 자식 노드들을 삽입합니다.
-                for(int n : list) {
-                    queue.offer(hs.get(n));
+                for(int sub : em.subordinates) {
+                    queue.offer(hs.get(sub));
                 }
 
                 // 현재 노드의 importance를 더해줍니다.
