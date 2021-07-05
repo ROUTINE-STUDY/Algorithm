@@ -13,10 +13,10 @@ class Solution {
             head.left = head.right;
             head.right = temp;
 
-            if (!isNull(head.left)) {
+            if (head.left != null) {
                 q.offer(head.left);
             }
-            if (!isNull(head.right)) {
+            if (head.right != null) {
                 q.offer(head.right);
             }
         }
@@ -24,11 +24,4 @@ class Solution {
         return root;
     }
 
-    public boolean isNull(TreeNode node) {
-        if (node == null) {
-            return true;
-        }
-
-        return false;
-    }
 }
