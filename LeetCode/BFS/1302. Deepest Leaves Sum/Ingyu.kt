@@ -1,5 +1,4 @@
 import java.util.*
-import javax.swing.tree.TreeNode
 
 class Solution {
     fun deepestLeavesSum(root: TreeNode?): Int {
