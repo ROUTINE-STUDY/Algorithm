@@ -28,7 +28,7 @@ public class Sanghoo {
             if(!isMatch) list.remove(i);
         }
 
-        return list.size() > 0 ? list.toArray(new String[list.size()]) : new String[]{};
+        return list.toArray(new String[list.size()]);
     }
 
 
