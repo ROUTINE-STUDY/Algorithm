@@ -1,7 +1,3 @@
-import javax.swing.tree.TreeNode;
-import java.util.LinkedList;
-import java.util.Queue;
-
 class Solution {
     public int deepestLeavesSum(TreeNode root) {
         //BFS 구현을 위해, Queue를 선언.
