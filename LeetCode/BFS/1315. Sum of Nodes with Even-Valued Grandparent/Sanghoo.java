@@ -37,8 +37,8 @@ public class Sanghoo {
                 if(node.right != null) q.add(node.right);
                 
                 if(node.val % 2 == 0) {
-                    if(node.left != null) q.add(node.left);
-                    if(node.right != null) q.add(node.right);
+                    if(node.left != null) q2.add(node.left);
+                    if(node.right != null) q2.add(node.right);
                 }
             }
         }
