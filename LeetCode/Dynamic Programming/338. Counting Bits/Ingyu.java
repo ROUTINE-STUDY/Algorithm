@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 class Solution {
     public int[] countBits(int n) {
         int[] answer = new int[n+1];
@@ -14,13 +12,5 @@ class Solution {
         }
 
         return answer;
-    }
-}
-
-public class Ingyu {
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        System.out.println("ss");
-        s.countBits(5);
     }
 }
