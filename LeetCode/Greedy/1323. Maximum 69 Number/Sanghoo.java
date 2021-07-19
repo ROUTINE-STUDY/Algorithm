@@ -13,7 +13,7 @@ public class Sanghoo {
     public int maximum69Number (int num) {
         int res = num;
 
-        int x = 10000;
+        int x = 1000;
         while(num > 0) {
             if(num/x == 6) {
                 res += x*3;
