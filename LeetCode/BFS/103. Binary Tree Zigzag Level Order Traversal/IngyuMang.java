@@ -1,9 +1,3 @@
-import javax.swing.tree.TreeNode;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-
 class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> answer = new LinkedList<>();//배열 끝에 추가라 LinkedList가 빠를 듯?
