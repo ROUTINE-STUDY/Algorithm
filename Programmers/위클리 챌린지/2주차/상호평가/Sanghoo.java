@@ -52,7 +52,7 @@ public class Sanghoo {
 
         if(selfScore == min || selfScore == max) {
             for(int score : scoreList) {
-                if(score == selfScore || score == selfScore) count++;
+                if(score == selfScore) count++;
             }
         }
 
