@@ -27,8 +27,11 @@ public class Sanghoo {
         testCaseList.sort(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if(Integer.valueOf(o1.split(" ")[0]) > Integer.valueOf(o2.split(" ")[0])) return 1;
-                else if(Integer.valueOf(o1.split(" ")[0]) < Integer.valueOf(o2.split(" ")[0])) return -1;
+                int parseInt1 = Integer.parseInt(o1.split(" ")[0]);
+                int parseInt2 = Integer.parseInt(o2.split(" ")[0]);
+
+                if(parseInt1 > parseInt2) return 1;
+                else if(parseInt1 < parseInt2) return -1;
                 return 0;
             }
         });
