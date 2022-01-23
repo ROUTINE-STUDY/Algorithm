@@ -29,8 +29,8 @@ public class Sanghoo {
             boardRowSize 및 boardColSize - 1을 한 이유는 모든 경우의 수를 그려보던 중 규칙 발견
             (i, j) = (0,0), (0,1) ...  이런식으로 자를 수 있는 보드판의 지점을 얻을 수 있음
             */
-            for(int i = 0; i<inputN-(boardRowSize-1); i++) {
-                for(int j = 0; j<inputM-(boardColSize-1); j++) {
+            for(int i = 0; i<=inputN-boardRowSize; i++) {
+                for(int j = 0; j<=inputM-boardColSize; j++) {
                     // 자를 수 있는 보드판 경우의 수 모두 탐색
                     result = Math.min(result, getPaintingCount(i , j));
                 }
