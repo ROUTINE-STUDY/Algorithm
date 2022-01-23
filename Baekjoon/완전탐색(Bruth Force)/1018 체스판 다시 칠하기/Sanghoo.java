@@ -41,7 +41,7 @@ public class Sanghoo {
             char targetColor = (i%2 == 0) ? 'B' : 'W';
             for(int j = col; j<col+boardColSize; j++) {
                 char curBoardColor = board[i][j];
-                paintingCount = (targetColor == curBoardColor) ? paintingCount : ++paintingCount;
+                if(targetColor != curBoardColor) ++paintingCount;
                 targetColor = (targetColor == 'B') ? 'W' : 'B';
             }
         }
