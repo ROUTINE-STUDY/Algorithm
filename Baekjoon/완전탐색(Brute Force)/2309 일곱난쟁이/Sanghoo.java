@@ -11,20 +11,20 @@ public class Sanghoo {
 
     public static void main(String[] args) throws IOException {
         List<Integer> dwarfs = new ArrayList<>();
-        int targetTotalHeight = -100;
+        int sumOfFakeDwarfs = -100;
 
         try(final BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             // 입력 + 찾아야하는 키의 합 계산
             for(int i=0; i<9; i++) {
                 int height = Integer.parseInt(br.readLine());
                 dwarfs.add(height);
-                targetTotalHeight += height;
+                sumOfFakeDwarfs += height;
             }
 
             // 가짜 난쟁이 2명의 키를 찾자
             int dwarf1 = 0, dwarf2 = 0;
             for(int height : dwarfs) {
-                int targetHeight = targetTotalHeight - height;
+                int targetHeight = sumOfFakeDwarfs - height;
                 if(dwarfs.indexOf(targetHeight) > 0) {
                     dwarf1 = height;
                     dwarf2 = targetHeight;
