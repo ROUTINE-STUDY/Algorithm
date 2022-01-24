@@ -5,17 +5,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-import static java.lang.Math.pow;
-
 public class Sanghoo {
 
     static int[][] testCase;
 
     public static void main(String[] args) throws IOException {
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            StringBuilder sb = new StringBuilder();
             int testCaseCount = Integer.parseInt(br.readLine());
             testCase = new int[testCaseCount][];
 
+            // 입력
             for(int i=0; i<testCaseCount; i++) {
                 StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -24,23 +24,24 @@ public class Sanghoo {
                 testCase[i] = new int[]{n,m};
             }
 
+            // 구현
             for(int i=0; i<testCaseCount; i++) {
                 int n = testCase[i][0];
                 int m = testCase[i][1];
 
-                System.out.println(calculate(n,m));
+                sb.append(calculate(n,m)).append("\n");
             }
+            System.out.println(sb);
         }
     }
 
     private static int calculate(int n, int m) {
         int integerCount = 0;
-        double result = 0;
+        double result;
 
-        for(int a=1; a<n-1; a++) {
-            for(int b=a+1; b<n; b++) {
-                result = ((pow(a,2)+ pow(b,2) +m) / (a*b));
-
+        for(double a=1; a<n-1; a++) {
+            for(double b=a+1; b<n; b++) {
+                result = (a*a + b*b + m) / (a*b);
                 if(result == (int) result) integerCount++;
             }
         }
