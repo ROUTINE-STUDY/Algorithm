@@ -5,31 +5,32 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-import static java.lang.Math.*;
+import static java.lang.Math.pow;
 
 public class Sanghoo {
 
-    static int[][] case;
+    static int[][] testCase;
 
     public static void main(String[] args) throws IOException {
-
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             int testCaseCount = Integer.parseInt(br.readLine());
-            case = new int[testCaseCount][];
+            testCase = new int[testCaseCount][];
 
-            // 입력과 로직을 분리 안했다..
             for(int i=0; i<testCaseCount; i++) {
                 StringTokenizer st = new StringTokenizer(br.readLine());
 
                 int n = Integer.parseInt(st.nextToken());
                 int m = Integer.parseInt(st.nextToken());
-                case[i] = {n,m};
+                testCase[i] = new int[]{n,m};
+            }
 
-                System.out.println(case[i]);
-//                System.out.println(calculate(n,m));
+            for(int i=0; i<testCaseCount; i++) {
+                int n = testCase[i][0];
+                int m = testCase[i][1];
+
+                System.out.println(calculate(n,m));
             }
         }
-
     }
 
     private static int calculate(int n, int m) {
