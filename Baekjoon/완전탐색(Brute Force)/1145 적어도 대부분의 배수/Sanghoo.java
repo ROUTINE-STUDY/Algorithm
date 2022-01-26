@@ -26,10 +26,8 @@ public class Sanghoo {
             int count = 0;
 
             for(int num : nums) {
-                if(answer % num == 0) {
-                    if(++count == 3) {
-                        return answer;
-                    }
+                if(answer % num == 0 && ++count == 3) {
+                    return answer;
                 }
             }
         }
