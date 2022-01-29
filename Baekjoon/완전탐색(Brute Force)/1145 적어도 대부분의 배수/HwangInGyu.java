@@ -17,9 +17,9 @@ public class HwangInGyu {
     }
 
     private static int getAlmostMultipleNumber(int[] arrOfNums) {
-        int cntOfBaesoo = 0;
         int number;
         for (number = 1; number <= 1000000; number++) {
+            int cntOfBaesoo = 0;
             for (int i = 0; i < arrOfNums.length; i++) {
                 if (number%arrOfNums[i] == 0) {
                     cntOfBaesoo++;
@@ -28,7 +28,6 @@ public class HwangInGyu {
                     }
                 }
             }
-            cntOfBaesoo = 0;
         }
 
         return -1;
