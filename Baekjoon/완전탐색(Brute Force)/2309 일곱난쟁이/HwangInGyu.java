@@ -43,7 +43,7 @@ public class HwangInGyu {
     // 가짜 드워프들의 키를 반환하는 메서드
     private static int[] getFalseDwarfsIndex(int[] heightOfPeople, int[] heightOfFalseDwarf, int currentSumOfHeight,int cntOfCurrentFalseDwarf, int idxOfPeople) {
         if (cntOfCurrentFalseDwarf == cntOfPeople-cntOfDwarfs) {
-            if (currentSumOfHeight == 100) {
+            if (currentSumOfHeight == maxLength) {
                 return heightOfFalseDwarf;
             }
             return null;
