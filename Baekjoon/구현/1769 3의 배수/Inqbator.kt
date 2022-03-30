@@ -18,15 +18,12 @@ fun getCntOfLoop(X: String): Int {
 
     var x = StringBuilder(X)
     var temp = 0
-    while (true) {
+    while (x.length > 1) {
         cnt++
         for (i in x.length-1 downTo 0) {
             temp += x[i].digitToInt()
         }
 
-        if (temp < 10) {
-            break
-        }
         x = StringBuilder(temp.toString())
         temp = 0
     }
