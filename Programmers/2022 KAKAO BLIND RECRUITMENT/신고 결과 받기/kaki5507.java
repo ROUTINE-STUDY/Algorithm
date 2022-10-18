@@ -11,19 +11,19 @@ public class reportResult {
 		String[] report = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
 		int k = 2;
 		
-		int[] retMail = new int[id_list.length]; // ¹ŞÀ» ¸ŞÀÏ È½¼ö
+		int[] retMail = new int[id_list.length]; // ë°›ì„ ë©”ì¼ íšŸìˆ˜
 		HashMap<String,Integer> reportMap = new HashMap<>();
 		HashMap<String,HashSet<String>> reportMapNum = new HashMap<>();
 		
-		// ¸Ê ¼¼ÆÃ
+		// ë§µ ì„¸íŒ…
 		for(int i=0; i<id_list.length; i++) {
 			reportMap.put(id_list[i], i);
 			reportMapNum.put(id_list[i], new HashSet<String>());
 		}
 		
-		// º¸³»´Â »ç¶÷ se ¹Ş´Â »ç¶÷ re
+		// ë³´ë‚´ëŠ” ì‚¬ëŒ se ë°›ëŠ” ì‚¬ëŒ re
 		for(int i=0; i<report.length; i++) {
-			String[] split = report[i].split(" "); // ¶ç¾î¾²±â·Î ±¸ºĞ
+			String[] split = report[i].split(" "); // ë„ì–´ì“°ê¸°ë¡œ êµ¬ë¶„
 			String se = split[0];
 			String re = split[1];
 			reportMapNum.get(re).add(se);
