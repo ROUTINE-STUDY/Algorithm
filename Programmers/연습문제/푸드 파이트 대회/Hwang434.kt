@@ -13,10 +13,8 @@ class Solution {
         charArray[length / 2] = '0'
         var pointer = 1
         for (i in 0 until length / 2) {
-            if (food[pointer] == 0) {
-                while (food[pointer] == 0) {
-                    pointer++
-                }
+            while (food[pointer] == 0) {
+                pointer++
             }
 
             charArray[i] = pointer.digitToChar()
