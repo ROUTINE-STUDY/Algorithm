@@ -1,0 +1,20 @@
+class Solution {
+    public int solution(int n) {
+        return pibo(n);
+    }
+
+    public static int pibo(int num){
+        int cache[] = new int[num+1]; // 캐쉬 남겨둠
+
+        if(num <= 1){return num;}
+
+        cache[0] = 0;
+        cache[1] = 1;
+
+        for(int i=2; i<=num; i++){
+            cache[i] = (cache[i-1] + cache[i-2]) % 1234567;
+        }
+
+        return cache[num];
+    }
+}
