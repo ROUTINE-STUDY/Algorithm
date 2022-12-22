@@ -1,0 +1,24 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Back15886 {
+    public static void main(String[] args) {
+        // String str = "EEWWEW"; 입력 6 
+        int cnt = 1;
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int mapNum = Integer.parseInt(br.readLine());
+            String move = br.readLine();
+            for(int i=1; i<mapNum; i++){
+                if(move.charAt(i) == 'E' && move.charAt(i-1) == 'W'){
+                    cnt++;
+                }
+            }
+
+            System.out.println(cnt);
+        } catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
