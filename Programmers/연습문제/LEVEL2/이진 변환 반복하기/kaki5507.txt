@@ -1,0 +1,42 @@
+public class Main {
+    public static void main(String[] args) {
+        String s = "110010101001"; // 정답 [ 3,8 ]
+        // 01110 [ 3,3 ]      1111111 [ 4,1 ]
+        // s가 1이 되면 2진변환 종료
+
+        // 110010101001 -> 시작
+        // 111111 -> 6
+        // 110
+        // 11 -> 2
+        // 10
+        // 1  -> 종료
+        int zeroCnt = 0;
+        int changeCnt = 0;
+
+        int[] answer = new int[2];
+        while(!s.equals("1")){
+            for(int i=0; i<s.length(); i++){
+                if(s.charAt(i) == '0'){
+                    zeroCnt++;
+                }
+            }
+            s = binaryChange(s);
+            changeCnt++;
+        }
+        System.out.println(zeroCnt);
+        System.out.println(changeCnt);
+
+    }
+
+    public static String binaryChange(String num){
+        int binaryNum = num.replaceAll("0","").length(); // 6
+        String tmp = "";
+
+        while(binaryNum > 0){
+            tmp += String.valueOf(binaryNum % 2);
+            binaryNum = binaryNum / 2;
+        }
+
+        return tmp;
+    }
+}
