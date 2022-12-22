@@ -1,0 +1,45 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+            BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+            int T = Integer.parseInt(bf.readLine()); 
+
+            while(T-- > 0){
+                int ret = Integer.parseInt(bf.readLine()); 
+                int[] player = new int[ret+1];
+                boolean[] visits = new boolean[ret+1];
+
+                for(int i=1; i<=ret; i++){
+                    player[i] = Integer.parseInt(bf.readLine());
+                }
+
+                int point = 1;
+                int cnt = 0;
+                
+                while(true){
+                    if(player[point] == ret){
+                        cnt++;
+                        break;
+                    }
+
+                    if(visits[player[point]] == true){
+                        cnt = 0;
+                        break;
+                    }else{ // 첫 방문
+                        point = player[point]; 
+                        visits[point] = true;
+                        cnt++;
+                    }
+                }
+                System.out.println(cnt);
+            }
+
+        } 
+
+    }
+}
