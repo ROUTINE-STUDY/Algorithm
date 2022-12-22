@@ -1,0 +1,26 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        
+        final int first = oneNumCnt(n);
+        while (true) {
+            n++;
+            if(first == oneNumCnt(n)){
+                answer = n;
+                break;
+            }
+        }
+        
+        return answer;
+    }
+    
+    public static int oneNumCnt(int num){
+        int  cnt = 0;
+        while(num > 0) {
+            if(num % 2 == 1){cnt++;}
+            num = num / 2;
+        }
+        return cnt;
+    }
+    
+}
