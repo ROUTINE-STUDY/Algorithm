@@ -1,17 +1,14 @@
-public class Coke {
-    public static void main(String[] args) {
-        int a = 2;
-        int b = 1;
-        int n = 20;
-        int impo = 0;
-        int answer = 0;
+class Solution {
+    public int solution(int a, int b, int n) {
+        int recCoke = 0;
+        int answer = 0; // 9
 
         while(n >= a){
-            impo = n % a + n / a; // 반납 가능한 빈병 수
-            n = (n - ( n % a ) - ( n / a )) * b;
-            answer += impo;
+            recCoke = n / a * b; // 받은 코카
+            n = n - ( n - n % a ) + (recCoke);
+            answer += recCoke;
         }
-        System.out.println(answer);
-
+        
+        return answer;
     }
 }
