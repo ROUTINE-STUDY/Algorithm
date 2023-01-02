@@ -1,0 +1,23 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0; // 무조건 1개 있으므로
+        int cnt = n;
+        int tmp = 1;
+        while(cnt-- > 0){
+            int accum = 0;
+            
+            for(int i=tmp; i<=n; i++){
+                accum+=i;
+                if(accum > n){
+                    break;
+                }else if(accum == n){
+                    answer++;
+                    break;
+                }
+            }
+            tmp++;
+        }
+        
+        return answer;
+    }
+}
